@@ -1,0 +1,39 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:936529873989:task-definition/my-family:1",
+    "containerDefinitions": [
+        {
+            "name": "my-service",
+            "image": "936529873989.dkr.ecr.eu-central-1.amazonaws.com/ecrrepo-https-server:latest",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "my-family",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "registeredAt": "2023-05-13T09:33:50.217Z",
+    "registeredBy": "arn:aws:iam::936529873989:user/github-action",
+    "tags": []
+}
